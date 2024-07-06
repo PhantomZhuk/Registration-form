@@ -19,16 +19,23 @@
         align-items: center;
         padding: 50px;
         background-color: #595959;
-        border-radius: 0 0 20px 20px;
         color: #fff;
 
         .logo {
+            width: 430px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 28px;
+
+            img {
+                height: 85px;
+            }
         }
 
         .btnSettings {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 5px;
             background-color: #fff;
             display: flex;
@@ -36,7 +43,7 @@
             align-items: center;
             cursor: pointer;
             color: #333;
-            font-size: 24px;
+            font-size: 22px;
         }
     }
 
@@ -76,20 +83,26 @@
 
                 .loginPlaceholder {
                     position: absolute;
+                    background-color: #fff;
                     margin-top: 20px;
                     margin-left: 30px;
+                    transition: 0.3s;
                 }
 
                 .emailPlaceholder {
                     position: absolute;
+                    background-color: #fff;
                     margin-top: 75px;
                     margin-left: 30px;
+                    transition: 0.3s;
                 }
 
                 .passwordPlaceholder {
                     position: absolute;
+                    background-color: #fff;
                     margin-top: 130px;
                     margin-left: 30px;
+                    transition: 0.3s;
                 }
             }
 
