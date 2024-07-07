@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #e9f3fe;
 }
 .wrap header {
   width: 100%;
@@ -18,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-  background-color: #595959;
+  background-color: #55a4f9;
   color: #fff;
 }
 .wrap header .logo {
@@ -35,12 +36,12 @@
   width: 45px;
   height: 45px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #0e63af;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: #333;
+  color: #fff;
   font-size: 22px;
 }
 .wrap main {
@@ -52,7 +53,7 @@
 }
 .wrap main .formContainer {
   width: 400px;
-  height: 450px;
+  height: 470px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -60,6 +61,7 @@
   box-shadow: 0 3px 10px #333;
   border-radius: 20px;
   padding: 20px;
+  background-color: #fff;
 }
 .wrap main .formContainer .inputContainer {
   width: 100%;
@@ -102,6 +104,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  padding: 0 10px;
 }
 .wrap main .formContainer .checkContainer li {
   margin: 5px;
@@ -116,7 +119,7 @@
   padding: 8px 32px;
   border-radius: 5px;
   border: none;
-  background-color: #333;
+  background-color: #6dc54a;
   color: #fff;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
