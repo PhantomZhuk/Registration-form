@@ -11,11 +11,13 @@ $(`#loginInput`).focus(() => {
 });
 
 $(`#loginInput`).blur(() => {
-    $(`.loginPlaceholder`).css({
-        'margin-top': '20px',
-        'padding': '0px',
-        'margin-left': '30px'
-    })
+    if($(`#loginInput`).val().length < 1){
+        $(`.loginPlaceholder`).css({
+            'margin-top': '20px',
+            'padding': '0px',
+            'margin-left': '30px'
+        })
+    }
 });
 
 $(`.emailPlaceholder`).click(() => {
@@ -24,18 +26,20 @@ $(`.emailPlaceholder`).click(() => {
 
 $(`#emailInput`).focus(() => {
     $('.emailPlaceholder').css({
-        'margin-top': '50px',
+        'margin-top': '55px',
         'padding': '5px',
         'margin-left': '20px'
     });
 });
 
 $(`#emailInput`).blur(() => {
-    $(`.emailPlaceholder`).css({
-        'margin-top': '75px',
-        'padding': '0px',
-        'margin-left': '30px'
-    })
+    if($(`#emailInput`).val().length < 1){
+        $(`.emailPlaceholder`).css({
+            'margin-top': '80px',
+            'padding': '0px',
+            'margin-left': '30px'
+        })
+    }
 });
 
 $(`.passwordPlaceholder`).click(() => {
@@ -44,16 +48,28 @@ $(`.passwordPlaceholder`).click(() => {
 
 $(`#passwordInput`).focus(() => {
     $('.passwordPlaceholder').css({
-        'margin-top': '105px',
+        'margin-top': '115px',
         'padding': '5px',
         'margin-left': '20px'
     });
 });
 
 $(`#passwordInput`).blur(() => {
-    $(`.passwordPlaceholder`).css({
-        'margin-top': '130px',
-        'padding': '0px',
-        'margin-left': '30px'
-    })
+    if($(`#passwordInput`).val().length < 1){
+        $(`.passwordPlaceholder`).css({
+            'margin-top': '140px',
+            'padding': '0px',
+            'margin-left': '30px'
+        })
+    }
+});
+
+$(`.viewPassword`).click(()=>{
+    if ($(`.viewPassword`).hasClass('fa-eye-slash')) {
+        $(`.viewPassword`).removeClass('fa-eye-slash').addClass('fa-eye');
+        $(`#passwordInput`).attr('type', 'text');
+    } else if ($(`.viewPassword`).hasClass('fa-eye')) {
+        $(`.viewPassword`).removeClass('fa-eye').addClass('fa-eye-slash');
+        $(`#passwordInput`).attr('type', 'password');
+    }
 });

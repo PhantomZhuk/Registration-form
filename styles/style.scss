@@ -57,7 +57,7 @@
 
         .formContainer {
             width: 400px;
-            height: 470px;
+            height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -74,12 +74,12 @@
 
                 input {
                     width: 90%;
-                    height: 35px;
+                    height: 40px;
                     margin: 10px;
                     border: 1px solid #333;
                     border-radius: 5px;
                     outline: none;
-                    padding-left: 10px;
+                    padding-left: 15px;
                     font-size: 16px;
                 }
 
@@ -94,7 +94,7 @@
                 .emailPlaceholder {
                     position: absolute;
                     background-color: #fff;
-                    margin-top: 75px;
+                    margin-top: 80px;
                     margin-left: 30px;
                     transition: 0.3s;
                 }
@@ -102,9 +102,16 @@
                 .passwordPlaceholder {
                     position: absolute;
                     background-color: #fff;
-                    margin-top: 130px;
+                    margin-top: 140px;
                     margin-left: 30px;
                     transition: 0.3s;
+                }
+
+                .viewPassword {
+                    position: absolute;
+                    margin-top: 142px;
+                    margin-left: 300px;
+                    cursor: pointer;
                 }
             }
 
