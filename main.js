@@ -73,3 +73,31 @@ $(`.viewPassword`).click(()=>{
         $(`#passwordInput`).attr('type', 'password');
     }
 });
+
+let checkColor = `#6dc54a`;
+
+$(`#passwordInput`).on(`input`, ()=>{
+    let password = $(`#passwordInput`).val();
+
+    $(`.check3, .check4, .check5, .check6, .check7`).css(`color`, ``);
+
+    if (password.length >= 8 && password.length <= 12){
+        $(`.check3`).css(`color`, checkColor);
+    }
+
+    if (/[!@#$%^&*()_+\-=\|?/><.,`~]/g.test(password)){
+        $(`.check4`).css(`color`, checkColor);
+    }
+
+    if (/[A-Z]/g.test(password)){
+        $(`.check5`).css(`color`, checkColor);
+    }
+
+    if (/[a-z]/g.test(password)){
+        $(`.check6`).css(`color`, checkColor);
+    }
+
+    if (/[0-9]/g.test(password)){
+        $(`.check7`).css(`color`, checkColor);
+    }
+});
