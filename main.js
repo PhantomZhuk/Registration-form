@@ -74,8 +74,20 @@ $(`.viewPassword`).click(()=>{
     }
 });
 
-
 let checkColor = `#a7c957`;
+
+$(`#loginInput`).on(`input`, ()=>{
+    let login = $(`#loginInput`).val();
+    $('.check1, .check2').css('color', '');
+
+    if (login.length >= 4){
+        $(`.check1`).css(`color`, checkColor);
+    }
+
+    if (!/\s/g.test(login)){
+        $(`.check2`).css(`color`, checkColor);
+    }
+});
 
 $(`#passwordInput`).on(`input`, ()=>{
     let password = $(`#passwordInput`).val();
