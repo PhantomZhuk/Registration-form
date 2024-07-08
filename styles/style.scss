@@ -8,140 +8,99 @@
     width: 100%;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: #e9f3fe;
+    background-color: #344e41;
 
-    header {
-        width: 100%;
-        height: 10vh;
+    .formContainer {
+        width: 400px;
+        height: 500px;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 50px;
-        background-color: #55a4f9;
+        box-shadow: 0 3px 10px #333;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: #3a5a40;
         color: #fff;
 
-        .logo {
-            width: 430px;
+        .inputContainer {
+            width: 100%;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 28px;
+            flex-direction: column;
 
-            img {
-                height: 85px;
+            input {
+                width: 90%;
+                height: 40px;
+                margin: 10px;
+                border: 2px solid #fff;
+                border-radius: 5px;
+                outline: none;
+                padding-left: 15px;
+                font-size: 16px;
+                background-color: #3a5a40;
+                color: #fff;
+            }
+
+            .loginPlaceholder {
+                position: absolute;
+                background-color: #3a5a40;
+                margin-top: 20px;
+                margin-left: 30px;
+                transition: 0.3s;
+            }
+
+            .emailPlaceholder {
+                position: absolute;
+                background-color: #3a5a40;
+                margin-top: 80px;
+                margin-left: 30px;
+                transition: 0.3s;
+            }
+
+            .passwordPlaceholder {
+                position: absolute;
+                background-color: #3a5a40;
+                margin-top: 140px;
+                margin-left: 30px;
+                transition: 0.3s;
+            }
+
+            .viewPassword {
+                position: absolute;
+                margin-top: 142px;
+                margin-left: 300px;
+                cursor: pointer;
             }
         }
 
-        .btnSettings {
-            width: 45px;
-            height: 45px;
-            border-radius: 5px;
-            background-color: #0e63af;
+        .checkContainer {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0 10px;
+
+            li {
+                margin: 5px;
+                font-size: 17px;
+            }
+        }
+
+        .btnContainer {
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            cursor: pointer;
-            color: #fff;
-            font-size: 22px;
-        }
-    }
 
-    main {
-        width: 100%;
-        min-height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .formContainer {
-            width: 400px;
-            height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 3px 10px #333;
-            border-radius: 20px;
-            padding: 20px;
-            background-color: #fff;
-
-            .inputContainer {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-
-                input {
-                    width: 90%;
-                    height: 40px;
-                    margin: 10px;
-                    border: 1px solid #333;
-                    border-radius: 5px;
-                    outline: none;
-                    padding-left: 15px;
-                    font-size: 16px;
-                }
-
-                .loginPlaceholder {
-                    position: absolute;
-                    background-color: #fff;
-                    margin-top: 20px;
-                    margin-left: 30px;
-                    transition: 0.3s;
-                }
-
-                .emailPlaceholder {
-                    position: absolute;
-                    background-color: #fff;
-                    margin-top: 80px;
-                    margin-left: 30px;
-                    transition: 0.3s;
-                }
-
-                .passwordPlaceholder {
-                    position: absolute;
-                    background-color: #fff;
-                    margin-top: 140px;
-                    margin-left: 30px;
-                    transition: 0.3s;
-                }
-
-                .viewPassword {
-                    position: absolute;
-                    margin-top: 142px;
-                    margin-left: 300px;
-                    cursor: pointer;
-                }
-            }
-
-            .checkContainer {
-                width: 100%;
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-                padding: 0 10px;
-
-                li {
-                    margin: 5px;
-                    font-size: 17px;
-                }
-            }
-
-            .btnContainer {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                #continue {
-                    padding: 8px 32px;
-                    border-radius: 5px;
-                    border: none;
-                    background-color: #6dc54a;
-                    color: #fff;
-                    cursor: pointer;
-                }
+            #continue {
+                padding: 8px 32px;
+                border-radius: 5px;
+                border: none;
+                background-color: #588157;
+                color: #fff;
+                cursor: pointer;
             }
         }
     }

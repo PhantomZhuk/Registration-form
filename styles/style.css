@@ -8,50 +8,11 @@
   width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #e9f3fe;
-}
-.wrap header {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  background-color: #55a4f9;
-  color: #fff;
-}
-.wrap header .logo {
-  width: 430px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 28px;
-}
-.wrap header .logo img {
-  height: 85px;
-}
-.wrap header .btnSettings {
-  width: 45px;
-  height: 45px;
-  border-radius: 5px;
-  background-color: #0e63af;
-  display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  color: #fff;
-  font-size: 22px;
+  background-color: #344e41;
 }
-.wrap main {
-  width: 100%;
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.wrap main .formContainer {
+.wrap .formContainer {
   width: 400px;
   height: 500px;
   display: flex;
@@ -61,72 +22,75 @@
   box-shadow: 0 3px 10px #333;
   border-radius: 20px;
   padding: 20px;
-  background-color: #fff;
+  background-color: #3a5a40;
+  color: #fff;
 }
-.wrap main .formContainer .inputContainer {
+.wrap .formContainer .inputContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.wrap main .formContainer .inputContainer input {
+.wrap .formContainer .inputContainer input {
   width: 90%;
   height: 40px;
   margin: 10px;
-  border: 1px solid #333;
+  border: 2px solid #fff;
   border-radius: 5px;
   outline: none;
   padding-left: 15px;
   font-size: 16px;
+  background-color: #3a5a40;
+  color: #fff;
 }
-.wrap main .formContainer .inputContainer .loginPlaceholder {
+.wrap .formContainer .inputContainer .loginPlaceholder {
   position: absolute;
-  background-color: #fff;
+  background-color: #3a5a40;
   margin-top: 20px;
   margin-left: 30px;
   transition: 0.3s;
 }
-.wrap main .formContainer .inputContainer .emailPlaceholder {
+.wrap .formContainer .inputContainer .emailPlaceholder {
   position: absolute;
-  background-color: #fff;
+  background-color: #3a5a40;
   margin-top: 80px;
   margin-left: 30px;
   transition: 0.3s;
 }
-.wrap main .formContainer .inputContainer .passwordPlaceholder {
+.wrap .formContainer .inputContainer .passwordPlaceholder {
   position: absolute;
-  background-color: #fff;
+  background-color: #3a5a40;
   margin-top: 140px;
   margin-left: 30px;
   transition: 0.3s;
 }
-.wrap main .formContainer .inputContainer .viewPassword {
+.wrap .formContainer .inputContainer .viewPassword {
   position: absolute;
   margin-top: 142px;
   margin-left: 300px;
   cursor: pointer;
 }
-.wrap main .formContainer .checkContainer {
+.wrap .formContainer .checkContainer {
   width: 100%;
   list-style: none;
   display: flex;
   flex-direction: column;
   padding: 0 10px;
 }
-.wrap main .formContainer .checkContainer li {
+.wrap .formContainer .checkContainer li {
   margin: 5px;
   font-size: 17px;
 }
-.wrap main .formContainer .btnContainer {
+.wrap .formContainer .btnContainer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.wrap main .formContainer .btnContainer #continue {
+.wrap .formContainer .btnContainer #continue {
   padding: 8px 32px;
   border-radius: 5px;
   border: none;
-  background-color: #6dc54a;
+  background-color: #588157;
   color: #fff;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

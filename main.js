@@ -74,30 +74,31 @@ $(`.viewPassword`).click(()=>{
     }
 });
 
-let checkColor = `#6dc54a`;
+
+let checkColor = `#a7c957`;
 
 $(`#passwordInput`).on(`input`, ()=>{
     let password = $(`#passwordInput`).val();
 
-    $(`.check3, .check4, .check5, .check6, .check7`).css(`color`, ``);
+    $(`.check4, .check5, .check6, .check7, .check8`).css(`color`, ``);
 
     if (password.length >= 8 && password.length <= 12){
-        $(`.check3`).css(`color`, checkColor);
-    }
-
-    if (/[!@#$%^&*()_+\-=\|?/><.,`~]/g.test(password)){
         $(`.check4`).css(`color`, checkColor);
     }
 
-    if (/[A-Z]/g.test(password)){
+    if (/[!@#$%^&*()_+\-=\|?/><.,`~]/g.test(password)){
         $(`.check5`).css(`color`, checkColor);
     }
 
-    if (/[a-z]/g.test(password)){
+    if (/[A-Z]/g.test(password)){
         $(`.check6`).css(`color`, checkColor);
     }
 
-    if (/[0-9]/g.test(password)){
+    if (/[a-z]/g.test(password)){
         $(`.check7`).css(`color`, checkColor);
+    }
+
+    if (/[0-9]/g.test(password)){
+        $(`.check8`).css(`color`, checkColor);
     }
 });

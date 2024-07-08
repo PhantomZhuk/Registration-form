@@ -18,35 +18,30 @@
 <body>
 
     <div class="wrap">
-        <header>
-            <div class="logo"><img src="./img/icon.png" alt=""><h2>Registration form</h2></div>
-            <div class="btnSettings"><i class="fa-solid fa-gear"></i></div>
-        </header>
-        <main>
-            <div class="formContainer">
-                <div class="inputContainer">
-                    <input type="text" id="loginInput" autocomplete="off">
-                    <div class="loginPlaceholder">Login</div>
-                    <input type="text" id="emailInput" autocomplete="off">
-                    <div class="emailPlaceholder">Email</div>
-                    <input type="password" id="passwordInput" autocomplete="off">
-                    <div class="passwordPlaceholder">Password</div>
-                    <i class="fa-solid fa-eye-slash viewPassword"></i>
-                </div>
-                <ul class="checkContainer">
-                    <li class="check1">your login must contain at least 4 characters</li>
-                    <li class="check2">your login must not have spaces</li>
-                    <li class="check3">your password shoud have 8-12 symbols</li>
-                    <li class="check4">your password shoud have special symbols</li>
-                    <li class="check5">your password shoud have big letter</li>
-                    <li class="check6">your password shoud have small letter</li>
-                    <li class="check7">your password shoud have numbers</li>
-                </ul>
-                <div class="btnContainer">
-                    <button id="continue">Continue</button>
-                </div>
+        <div class="formContainer">
+            <div class="inputContainer">
+                <input type="text" id="loginInput" autocomplete="off">
+                <div class="loginPlaceholder">Login</div>
+                <input type="email" id="emailInput" autocomplete="off">
+                <div class="emailPlaceholder">Email</div>
+                <input type="password" id="passwordInput" autocomplete="off">
+                <div class="passwordPlaceholder">Password</div>
+                <i class="fa-solid fa-eye-slash viewPassword"></i>
             </div>
-        </main>
+            <ul class="checkContainer">
+                <li class="check1">your login must contain at least 4 characters</li>
+                <li class="check2">your login must not have spaces</li>
+                <li class="check3">your e-mail is correct</li>
+                <li class="check4">your password shoud have 8-12 symbols</li>
+                <li class="check5">your password shoud have special symbols</li>
+                <li class="check6">your password shoud have big letter</li>
+                <li class="check7">your password shoud have small letter</li>
+                <li class="check8">your password shoud have numbers</li>
+            </ul>
+            <div class="btnContainer">
+                <button id="continue">Continue</button>
+            </div>
+        </div>
     </div>
 
     <script src="./main.js"></script>
