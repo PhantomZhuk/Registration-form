@@ -89,9 +89,57 @@ $(`#loginInput`).on(`input`, () => {
     }
 });
 
+let settings = `regular`;
 
+function emailCheck(settings) {
+    if (settings == `regular`) {
+        $('#emailInput').on('input', () => {
+            let email = $('#emailInput').val();
+            let emailRegex = /([a-z\d]{3,64})+@([a-z]{3,255})+\.[a-z]{2,63}/;
+            $('.check3').css('color', '');
 
+            if (emailRegex.test(email) && !/\s/.test(email)) {
+                $('.check3').css('color', checkColor);
+            }
+        });
+    } else if (settings == `withoutRegular`) {
+        $('#emailInput').on('input', () => {
+            let email = $('#emailInput').val();
+            let searchSymbol = email.indexOf(`@`);
+            let localPart = email.substring(0, searchSymbol);
+            let searchSpace = email.indexOf(` `);
+            let searchPoint = email.indexOf(`.`);
+            let dotIndex = email.substring(searchSymbol+1, searchPoint);
+            let afterDotText = email.substring(searchPoint+1);
+            $('.check3').css('color', '');
 
+            if (localPart.length >= 3 
+                &&
+                localPart.length <= 64 
+                &&
+                searchSymbol 
+                &&
+                searchSpace == -1 
+                &&
+                searchPoint 
+                &&
+                dotIndex.length >= 3 
+                &&
+                dotIndex.length <= 255 
+                && 
+                afterDotText.length >= 2 
+                &&
+                afterDotText.length <= 63
+            ) {
+                $('.check3').css('color', checkColor);
+            }
+        });
+    } else {
+        console.error(`Error`);
+    }
+}
+
+emailCheck(settings);
 
 $(`#passwordInput`).on(`input`, () => {
     let password = $(`#passwordInput`).val();
@@ -147,6 +195,19 @@ $(`#settingsBtn`).click(() => {
                 <div class="withoutRegular">Without regular</div>
             </div>
         `)
+    if (settings == `regular`) {
+        $(`.chosenBox`).css({
+            'width': `100px`,
+            'height': `40px`,
+            'margin-left': `0px`,
+        });
+    } else if (settings == `withoutRegular`) {
+        $(`.chosenBox`).css({
+            'width': `120px`,
+            'height': `40px`,
+            'margin-left': `140px`,
+        });
+    }
 });
 
 $(`.settingsContainer`).on(`click`, `.fa-xmark`, () => {
@@ -180,6 +241,9 @@ $(`.settingsContainer`).on(`click`, `.regular`, () => {
         'height': `40px`,
         'margin-left': `0px`,
     });
+
+    settings = `regular`;
+    emailCheck(settings);
 });
 
 $(`.settingsContainer`).on(`click`, `.withoutRegular`, () => {
@@ -188,4 +252,7 @@ $(`.settingsContainer`).on(`click`, `.withoutRegular`, () => {
         'height': `40px`,
         'margin-left': `140px`,
     });
+
+    settings = `withoutRegular`;
+    emailCheck(settings);
 });
