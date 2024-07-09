@@ -83,8 +83,9 @@
 .wrap .formContainer .btnContainer {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 15px;
 }
 .wrap .formContainer .btnContainer #continue {
   padding: 8px 32px;
@@ -92,5 +93,58 @@
   border: none;
   background-color: #588157;
   color: #fff;
+  cursor: pointer;
+}
+.wrap .formContainer .btnContainer #settingsBtn {
+  cursor: pointer;
+  padding: 8px 10px;
+}
+.wrap .formContainer .btnContainer .settingsContainer {
+  border-radius: 5px;
+  border: none;
+  background-color: #588157;
+  color: #fff;
+}
+.wrap .formContainer .btnContainer .settingsContainer .settingsHeader {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.wrap .formContainer .btnContainer .settingsContainer .settingsHeader i {
+  cursor: pointer;
+}
+.wrap .formContainer .btnContainer .settingsContainer .toggleBtn {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+.wrap .formContainer .btnContainer .settingsContainer .toggleBtn .chosenBox {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #588157;
+  position: absolute;
+  transition: 0.5s;
+}
+.wrap .formContainer .btnContainer .settingsContainer .toggleBtn .regular {
+  width: 100px;
+  height: 40px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.wrap .formContainer .btnContainer .settingsContainer .toggleBtn .withoutRegular {
+  width: 120px;
+  height: 40px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
